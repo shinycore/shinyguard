@@ -5,8 +5,12 @@ description = "Check for LineageOS security updates"
 authors = ["shinycore"]
 license = "ISC"
 
+[tool.poetry.scripts]
+shinyguard = "shinyguard.cli:cli"
+
 [tool.poetry.dependencies]
 python = "^3.9"
+docopt = "^0.6.2"
 marshmallow = "^3.9.1"
 regex = "^2020.11.13"
 requests = "^2.25.0"

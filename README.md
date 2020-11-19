@@ -20,7 +20,23 @@ Using Poetry:
 
 ## Usage
 
-Python library:
+### Command line interface
+
+```bash
+$ shinyguard -d coral -p 2020-10-05 -b 2020-11-01
+```
+
+Result:
+
+```
+2020-11-05 security update is available:
+  - LineageOS version: 17.1
+  - Built on 2020-11-15
+```
+
+See `shinyguard -h` for more details.
+
+### Python library
 
 ```python
 import datetime
