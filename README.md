@@ -22,6 +22,14 @@ Using Poetry:
 
 ### Command line interface
 
+Automatic mode (LineageOS only):
+
+```bash
+$ shinyguard -a
+```
+
+Manual mode (other operating systems):
+
 ```bash
 $ shinyguard -d coral -p 2020-10-05 -b 2020-11-01
 ```
