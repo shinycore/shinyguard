@@ -12,6 +12,10 @@ An important thing to note is that a security patch version of 2020-11-05 does n
 
 ## Installation
 
+From automatically generated wheel file:
+
+- [Download](https://github.com/shinycore/shinyguard/releases/latest)
+
 Using Poetry:
 
 ```bash
