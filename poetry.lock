@@ -188,7 +188,7 @@ python-versions = ">=3.5"
 name = "regex"
 version = "2020.11.13"
 description = "Alternative regular expression module, to replace re."
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -250,7 +250,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "212ee646eb6a613d44b0fc7b1a301aec9b36fb8e63f2f08bb343f60e639cd36a"
+content-hash = "6ea15b01581d5ff5bbc184b85af3a9fe2858def01b4bfdc0ac7a8e1693739f87"
 
 [metadata.files]
 appdirs = [

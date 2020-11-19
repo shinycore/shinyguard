@@ -10,3 +10,8 @@ class MissingDeviceError(CheckError):
 class InvalidVersionError(CheckError):
     def __init__(self) -> None:
         super().__init__("This LineageOS version is invalid or unsupported")
+
+
+class MissingPatchDateError(CheckError):
+    def __init__(self) -> None:
+        super().__init__("Could not extract security patch version")
