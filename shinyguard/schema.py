@@ -28,3 +28,11 @@ class OTAUpdateListSchema(Schema):
     @post_load
     def flatten_response(self, data: dict, **kwargs: Any) -> list[dict]:
         return data.get("response")
+
+
+class GerritChangeSchema(Schema):
+    class Meta:
+        unknown = EXCLUDE
+
+    id = fields.Str()
+    submitted = fields.DateTime()
