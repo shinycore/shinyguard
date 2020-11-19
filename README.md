@@ -2,6 +2,14 @@
 
 Check for LineageOS security updates
 
+![Screenshot](assets/screenshot.png)
+
+## Legal notice
+
+This utility is neither endorsed by or affiliated with LineageOS project.
+
+This utility is unable to perform a software upgrade. You need to use Updater app or apply OTA update using recovery mode.
+
 ## Introduction
 
 *Every month*, new security updates for Android are released. You can find current patch's version in system settings ("Android security patch level"). If it's not available, then you have a bigger problem than just a missing entry.
@@ -12,27 +20,22 @@ An important thing to note is that a security patch version of 2020-11-05 does n
 
 ## Installation
 
-From automatically generated wheel file:
+Latest release is built automatically by GitHub CI system. This package is NOT available in PyPI.
 
 - [Download](https://github.com/shinycore/shinyguard/releases/latest)
-
-Using Poetry:
-
-```bash
-(.venv) $ poetry install
-```
+- Run `pip install <FILENAME>`
 
 ## Usage
 
 ### Command line interface
 
-Automatic mode (LineageOS only):
+If you have [Termux](https://termux.com) installed on your **LineageOS** device, this is the easiest way to use the software:
 
 ```bash
 $ shinyguard -a
 ```
 
-Manual mode (other operating systems):
+Otherwise you need to tell more about your device. This is an example usage for Google Pixel 4 XL:
 
 ```bash
 $ shinyguard -d coral -p 2020-10-05 -b 2020-11-01
@@ -47,6 +50,26 @@ Result:
 ```
 
 See `shinyguard -h` for more details.
+
+## Development stuff
+
+### Tech stack
+
+- `requests`, no surprise here
+- `marshmallow` schemas for 3rd party APIs
+- Command line utility (`docopt`)
+- Unit tests (`pytest`)
+  - 100% coverage
+  - Cache for 3rd party API responses
+- Automated GitHub releases
+
+### Installing from source
+
+Using [Poetry](https://python-poetry.org):
+
+```bash
+(.venv) $ poetry install
+```
 
 ### Python library
 
@@ -71,8 +94,6 @@ UpdateState(
     version='17.1'
 )
 ```
-
-## Development stuff
 
 ### Unit tests with coverage
 
