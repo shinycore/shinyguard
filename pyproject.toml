@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "shinyguard"
-version = "0.1.0"
+version = "1.0.0"
 description = "Check for LineageOS security updates"
 authors = ["shinycore"]
 license = "ISC"
