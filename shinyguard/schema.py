@@ -8,7 +8,7 @@ class TimestampDateTime(fields.Field):
     def _deserialize(self, value: Any, attr: Optional[str], data: Optional[dict], **kwargs) -> datetime:
         try:
             value = int(value)
-        except ValueError as e:
+        except ValueError as e:  # pragma: no cover
             raise ValidationError("Timestamp must be a number") from e
         else:
             return datetime.utcfromtimestamp(value)

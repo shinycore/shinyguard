@@ -20,6 +20,14 @@ Using Poetry:
 
 ## Development stuff
 
+### Unit tests with coverage
+
+```bash
+$ ./coverage.sh
+```
+
+Test results are exported to `/tmp/coverage`.
+
 ### Code style enforcement
 
 ```bash
