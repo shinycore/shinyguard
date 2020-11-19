@@ -18,6 +18,32 @@ Using Poetry:
 (.venv) $ poetry install
 ```
 
+## Usage
+
+Python library:
+
+```python
+import datetime
+from shinyguard import UpdateState, check_for_updates
+
+result: UpdateState = check_for_updates(
+    device="coral",
+    patch_date=datetime.date(2020, 10, 5),
+    build_date=datetime.date(2020, 11, 1)
+)
+```
+
+Result:
+
+```python
+UpdateState(
+    has_update=True,
+    patch_date=datetime.date(2020, 11, 5),
+    build_date=datetime.date(2020, 11, 15),
+    version='17.1'
+)
+```
+
 ## Development stuff
 
 ### Unit tests with coverage
